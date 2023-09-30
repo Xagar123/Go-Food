@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DF32CE3D8E1E37CE56AB342 /* Pods_GoFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F79C0CE637BA0138EDAFF7 /* Pods_GoFood.framework */; };
+		8D77C8CC2ABA0FD9000DC492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8CB2ABA0FD9000DC492 /* AppDelegate.swift */; };
+		8D77C8CE2ABA0FD9000DC492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8CD2ABA0FD9000DC492 /* SceneDelegate.swift */; };
+		8D77C8D32ABA0FD9000DC492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D77C8D12ABA0FD9000DC492 /* Main.storyboard */; };
+		8D77C8D52ABA0FDB000DC492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D77C8D42ABA0FDB000DC492 /* Assets.xcassets */; };
+		8D77C8D82ABA0FDB000DC492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D77C8D62ABA0FDB000DC492 /* LaunchScreen.storyboard */; };
+		8D77C8E32ABA112D000DC492 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8E22ABA112D000DC492 /* OnBoardingViewController.swift */; };
+		8D77C8E62ABA1400000DC492 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8E52ABA1400000DC492 /* Extension+UIView.swift */; };
+		8D77C8E82ABA18CE000DC492 /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8E72ABA18CE000DC492 /* OnBoardingSlide.swift */; };
+		8D77C8EA2ABA1A1F000DC492 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8E92ABA1A1F000DC492 /* OnBoardingCollectionViewCell.swift */; };
+		8D77C8EF2ABA2B6B000DC492 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8EE2ABA2B6B000DC492 /* SignInViewController.swift */; };
+		8DB1CD022ABAB83000445DFE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1CD012ABAB83000445DFE /* SignUpViewController.swift */; };
+		8DB1CD042ABB4EE900445DFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DB1CD032ABB4EE900445DFE /* GoogleService-Info.plist */; };
+		8DB1CD072ABB5A8200445DFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1CD062ABB5A8200445DFE /* HomeViewController.swift */; };
+		8DB1CD092ABB687300445DFE /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1CD082ABB687200445DFE /* GetStartedViewController.swift */; };
+		8DB1CD0C2ABB6C2300445DFE /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1CD0B2ABB6C2300445DFE /* ForgotPasswordViewController.swift */; };
+		8DC810B02AC479A800BF8F7D /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC810AE2AC479A800BF8F7D /* TableCollectionViewCell.swift */; };
+		8DC810B12AC479A800BF8F7D /* TableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC810AF2AC479A800BF8F7D /* TableCollectionViewCell.xib */; };
+		8DC810B52AC47B2F00BF8F7D /* BannerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC810B32AC47B2F00BF8F7D /* BannerCollectionCell.swift */; };
+		8DC810B62AC47B2F00BF8F7D /* BannerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC810B42AC47B2F00BF8F7D /* BannerCollectionCell.xib */; };
+		8DC810BA2AC4963000BF8F7D /* RecommendedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC810B82AC4963000BF8F7D /* RecommendedCollectionViewCell.swift */; };
+		8DC810BB2AC4963000BF8F7D /* RecommendedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC810B92AC4963000BF8F7D /* RecommendedCollectionViewCell.xib */; };
+		8DC810BE2AC4A7CE00BF8F7D /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC810BD2AC4A7CE00BF8F7D /* CustomHeaderView.swift */; };
+		8DC810C02AC4A7FC00BF8F7D /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC810BF2AC4A7FC00BF8F7D /* CustomHeaderView.xib */; };
+		8DC810C42AC4AEEE00BF8F7D /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC810C22AC4AEEE00BF8F7D /* ItemsCollectionViewCell.swift */; };
+		8DC810C52AC4AEEE00BF8F7D /* ItemsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DC810C32AC4AEEE00BF8F7D /* ItemsCollectionViewCell.xib */; };
+		8DC810C72AC4B79500BF8F7D /* OrderBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC810C62AC4B79500BF8F7D /* OrderBanner.swift */; };
+		8DEDB1142AC34E08003DEAA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEDB1132AC34E08003DEAA9 /* ProfileViewController.swift */; };
+		8DEDB1192AC3508B003DEAA9 /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEDB1172AC3508B003DEAA9 /* DeliveryTableViewCell.swift */; };
+		8DEDB11A2AC3508B003DEAA9 /* DeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEDB1182AC3508B003DEAA9 /* DeliveryTableViewCell.xib */; };
+		8DEDB11C2AC35490003DEAA9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEDB11B2AC35490003DEAA9 /* CardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4789EE3D5B99BAE9EDFFC43A /* Pods-GoFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoFood.debug.xcconfig"; path = "Target Support Files/Pods-GoFood/Pods-GoFood.debug.xcconfig"; sourceTree = "<group>"; };
+		8D77C8C82ABA0FD9000DC492 /* GoFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D77C8CB2ABA0FD9000DC492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D77C8CD2ABA0FD9000DC492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8D77C8D22ABA0FD9000DC492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D77C8D42ABA0FDB000DC492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D77C8D72ABA0FDB000DC492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D77C8D92ABA0FDB000DC492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D77C8E22ABA112D000DC492 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		8D77C8E52ABA1400000DC492 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		8D77C8E72ABA18CE000DC492 /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
+		8D77C8E92ABA1A1F000DC492 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D77C8EE2ABA2B6B000DC492 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8DB1CD012ABAB83000445DFE /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8DB1CD032ABB4EE900445DFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DB1CD062ABB5A8200445DFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8DB1CD082ABB687200445DFE /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		8DB1CD0B2ABB6C2300445DFE /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8DC810AE2AC479A800BF8F7D /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DC810AF2AC479A800BF8F7D /* TableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCollectionViewCell.xib; sourceTree = "<group>"; };
+		8DC810B32AC47B2F00BF8F7D /* BannerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionCell.swift; sourceTree = "<group>"; };
+		8DC810B42AC47B2F00BF8F7D /* BannerCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionCell.xib; sourceTree = "<group>"; };
+		8DC810B82AC4963000BF8F7D /* RecommendedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DC810B92AC4963000BF8F7D /* RecommendedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendedCollectionViewCell.xib; sourceTree = "<group>"; };
+		8DC810BD2AC4A7CE00BF8F7D /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		8DC810BF2AC4A7FC00BF8F7D /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
+		8DC810C22AC4AEEE00BF8F7D /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DC810C32AC4AEEE00BF8F7D /* ItemsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8DC810C62AC4B79500BF8F7D /* OrderBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBanner.swift; sourceTree = "<group>"; };
+		8DEDB1132AC34E08003DEAA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8DEDB1172AC3508B003DEAA9 /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
+		8DEDB1182AC3508B003DEAA9 /* DeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryTableViewCell.xib; sourceTree = "<group>"; };
+		8DEDB11B2AC35490003DEAA9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		91F79C0CE637BA0138EDAFF7 /* Pods_GoFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12707D2C94C7AABC39B3BBB /* Pods-GoFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoFood.release.xcconfig"; path = "Target Support Files/Pods-GoFood/Pods-GoFood.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D77C8C52ABA0FD9000DC492 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF32CE3D8E1E37CE56AB342 /* Pods_GoFood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09A2B4256023664EE544994B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4789EE3D5B99BAE9EDFFC43A /* Pods-GoFood.debug.xcconfig */,
+				F12707D2C94C7AABC39B3BBB /* Pods-GoFood.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5115D7F65693C709EC0C1838 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91F79C0CE637BA0138EDAFF7 /* Pods_GoFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D77C8BF2ABA0FD9000DC492 = {
+			isa = PBXGroup;
+			children = (
+				8D77C8CA2ABA0FD9000DC492 /* GoFood */,
+				8D77C8C92ABA0FD9000DC492 /* Products */,
+				09A2B4256023664EE544994B /* Pods */,
+				5115D7F65693C709EC0C1838 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8D77C8C92ABA0FD9000DC492 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D77C8C82ABA0FD9000DC492 /* GoFood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D77C8CA2ABA0FD9000DC492 /* GoFood */ = {
+			isa = PBXGroup;
+			children = (
+				8D77C8CB2ABA0FD9000DC492 /* AppDelegate.swift */,
+				8D77C8CD2ABA0FD9000DC492 /* SceneDelegate.swift */,
+				8D77C8EC2ABA26D7000DC492 /* AuthManager */,
+				8D77C8E42ABA1159000DC492 /* Extension */,
+				8D77C8DF2ABA10D3000DC492 /* Model */,
+				8D77C8E02ABA10DF000DC492 /* Views */,
+				8D77C8EB2ABA26C3000DC492 /* CustomeViews */,
+				8D77C8D12ABA0FD9000DC492 /* Main.storyboard */,
+				8D77C8D42ABA0FDB000DC492 /* Assets.xcassets */,
+				8D77C8D62ABA0FDB000DC492 /* LaunchScreen.storyboard */,
+				8D77C8D92ABA0FDB000DC492 /* Info.plist */,
+				8DB1CD032ABB4EE900445DFE /* GoogleService-Info.plist */,
+			);
+			path = GoFood;
+			sourceTree = "<group>";
+		};
+		8D77C8DF2ABA10D3000DC492 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D77C8E72ABA18CE000DC492 /* OnBoardingSlide.swift */,
+				8DC810C62AC4B79500BF8F7D /* OrderBanner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D77C8E02ABA10DF000DC492 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DEDB1122AC34DEB003DEAA9 /* ProfileVC */,
+				8DB1CD052ABB5A6E00445DFE /* HomeScreen */,
+				8D77C8E12ABA1103000DC492 /* OnBoarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8D77C8E12ABA1103000DC492 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				8D77C8E22ABA112D000DC492 /* OnBoardingViewController.swift */,
+				8D77C8E92ABA1A1F000DC492 /* OnBoardingCollectionViewCell.swift */,
+				8DB1CD082ABB687200445DFE /* GetStartedViewController.swift */,
+				8D77C8ED2ABA2702000DC492 /* SignIn */,
+				8DB1CD002ABAB7F500445DFE /* SignUp */,
+				8DB1CD0A2ABB6BFE00445DFE /* ForgotPassword */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		8D77C8E42ABA1159000DC492 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D77C8E52ABA1400000DC492 /* Extension+UIView.swift */,
+				8DEDB11B2AC35490003DEAA9 /* CardView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8D77C8EB2ABA26C3000DC492 /* CustomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810C12AC4AEBD00BF8F7D /* ItemsCell */,
+				8DC810BC2AC4A7AF00BF8F7D /* HeaderView */,
+				8DEDB1162AC35019003DEAA9 /* CustomeCollectionViewCells */,
+				8DEDB1152AC35002003DEAA9 /* CustomeTableViewCell */,
+			);
+			path = CustomeViews;
+			sourceTree = "<group>";
+		};
+		8D77C8EC2ABA26D7000DC492 /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AuthManager;
+			sourceTree = "<group>";
+		};
+		8D77C8ED2ABA2702000DC492 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				8D77C8EE2ABA2B6B000DC492 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8DB1CD002ABAB7F500445DFE /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8DB1CD012ABAB83000445DFE /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		8DB1CD052ABB5A6E00445DFE /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8DB1CD062ABB5A8200445DFE /* HomeViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		8DB1CD0A2ABB6BFE00445DFE /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				8DB1CD0B2ABB6C2300445DFE /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		8DC810AD2AC4797B00BF8F7D /* TableCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810AE2AC479A800BF8F7D /* TableCollectionViewCell.swift */,
+				8DC810AF2AC479A800BF8F7D /* TableCollectionViewCell.xib */,
+			);
+			path = TableCollectionView;
+			sourceTree = "<group>";
+		};
+		8DC810B22AC47B0700BF8F7D /* BannerCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810B32AC47B2F00BF8F7D /* BannerCollectionCell.swift */,
+				8DC810B42AC47B2F00BF8F7D /* BannerCollectionCell.xib */,
+			);
+			path = BannerCollectionCell;
+			sourceTree = "<group>";
+		};
+		8DC810B72AC4960400BF8F7D /* RecommendedCell */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810B82AC4963000BF8F7D /* RecommendedCollectionViewCell.swift */,
+				8DC810B92AC4963000BF8F7D /* RecommendedCollectionViewCell.xib */,
+			);
+			path = RecommendedCell;
+			sourceTree = "<group>";
+		};
+		8DC810BC2AC4A7AF00BF8F7D /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810BD2AC4A7CE00BF8F7D /* CustomHeaderView.swift */,
+				8DC810BF2AC4A7FC00BF8F7D /* CustomHeaderView.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		8DC810C12AC4AEBD00BF8F7D /* ItemsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810C22AC4AEEE00BF8F7D /* ItemsCollectionViewCell.swift */,
+				8DC810C32AC4AEEE00BF8F7D /* ItemsCollectionViewCell.xib */,
+			);
+			path = ItemsCell;
+			sourceTree = "<group>";
+		};
+		8DEDB1122AC34DEB003DEAA9 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				8DEDB1132AC34E08003DEAA9 /* ProfileViewController.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		8DEDB1152AC35002003DEAA9 /* CustomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810AD2AC4797B00BF8F7D /* TableCollectionView */,
+				8DEDB1172AC3508B003DEAA9 /* DeliveryTableViewCell.swift */,
+				8DEDB1182AC3508B003DEAA9 /* DeliveryTableViewCell.xib */,
+			);
+			path = CustomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		8DEDB1162AC35019003DEAA9 /* CustomeCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8DC810B72AC4960400BF8F7D /* RecommendedCell */,
+				8DC810B22AC47B0700BF8F7D /* BannerCollectionCell */,
+			);
+			path = CustomeCollectionViewCells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D77C8C72ABA0FD9000DC492 /* GoFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D77C8DC2ABA0FDB000DC492 /* Build configuration list for PBXNativeTarget "GoFood" */;
+			buildPhases = (
+				2B6090660E0E9F202F80DFDC /* [CP] Check Pods Manifest.lock */,
+				8D77C8C42ABA0FD9000DC492 /* Sources */,
+				8D77C8C52ABA0FD9000DC492 /* Frameworks */,
+				8D77C8C62ABA0FD9000DC492 /* Resources */,
+				44F2766FA05681DAA35DC397 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoFood;
+			productName = GoFood;
+			productReference = 8D77C8C82ABA0FD9000DC492 /* GoFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D77C8C02ABA0FD9000DC492 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8D77C8C72ABA0FD9000DC492 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 8D77C8C32ABA0FD9000DC492 /* Build configuration list for PBXProject "GoFood" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D77C8BF2ABA0FD9000DC492;
+			productRefGroup = 8D77C8C92ABA0FD9000DC492 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D77C8C72ABA0FD9000DC492 /* GoFood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D77C8C62ABA0FD9000DC492 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC810B62AC47B2F00BF8F7D /* BannerCollectionCell.xib in Resources */,
+				8D77C8D82ABA0FDB000DC492 /* LaunchScreen.storyboard in Resources */,
+				8DC810B12AC479A800BF8F7D /* TableCollectionViewCell.xib in Resources */,
+				8DEDB11A2AC3508B003DEAA9 /* DeliveryTableViewCell.xib in Resources */,
+				8DC810C02AC4A7FC00BF8F7D /* CustomHeaderView.xib in Resources */,
+				8DC810BB2AC4963000BF8F7D /* RecommendedCollectionViewCell.xib in Resources */,
+				8DB1CD042ABB4EE900445DFE /* GoogleService-Info.plist in Resources */,
+				8D77C8D52ABA0FDB000DC492 /* Assets.xcassets in Resources */,
+				8D77C8D32ABA0FD9000DC492 /* Main.storyboard in Resources */,
+				8DC810C52AC4AEEE00BF8F7D /* ItemsCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B6090660E0E9F202F80DFDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44F2766FA05681DAA35DC397 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoFood/Pods-GoFood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoFood/Pods-GoFood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoFood/Pods-GoFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D77C8C42ABA0FD9000DC492 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DEDB11C2AC35490003DEAA9 /* CardView.swift in Sources */,
+				8D77C8EF2ABA2B6B000DC492 /* SignInViewController.swift in Sources */,
+				8DC810C42AC4AEEE00BF8F7D /* ItemsCollectionViewCell.swift in Sources */,
+				8D77C8CC2ABA0FD9000DC492 /* AppDelegate.swift in Sources */,
+				8DB1CD0C2ABB6C2300445DFE /* ForgotPasswordViewController.swift in Sources */,
+				8DB1CD022ABAB83000445DFE /* SignUpViewController.swift in Sources */,
+				8D77C8CE2ABA0FD9000DC492 /* SceneDelegate.swift in Sources */,
+				8DEDB1192AC3508B003DEAA9 /* DeliveryTableViewCell.swift in Sources */,
+				8DC810B52AC47B2F00BF8F7D /* BannerCollectionCell.swift in Sources */,
+				8D77C8E62ABA1400000DC492 /* Extension+UIView.swift in Sources */,
+				8DC810B02AC479A800BF8F7D /* TableCollectionViewCell.swift in Sources */,
+				8DC810BE2AC4A7CE00BF8F7D /* CustomHeaderView.swift in Sources */,
+				8DEDB1142AC34E08003DEAA9 /* ProfileViewController.swift in Sources */,
+				8DB1CD072ABB5A8200445DFE /* HomeViewController.swift in Sources */,
+				8D77C8EA2ABA1A1F000DC492 /* OnBoardingCollectionViewCell.swift in Sources */,
+				8D77C8E32ABA112D000DC492 /* OnBoardingViewController.swift in Sources */,
+				8D77C8E82ABA18CE000DC492 /* OnBoardingSlide.swift in Sources */,
+				8DC810BA2AC4963000BF8F7D /* RecommendedCollectionViewCell.swift in Sources */,
+				8DC810C72AC4B79500BF8F7D /* OrderBanner.swift in Sources */,
+				8DB1CD092ABB687300445DFE /* GetStartedViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D77C8D12ABA0FD9000DC492 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D77C8D22ABA0FD9000DC492 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D77C8D62ABA0FDB000DC492 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D77C8D72ABA0FDB000DC492 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D77C8DA2ABA0FDB000DC492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D77C8DB2ABA0FDB000DC492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D77C8DD2ABA0FDB000DC492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4789EE3D5B99BAE9EDFFC43A /* Pods-GoFood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4LHNY2FHRA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoFood/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myn.GoFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D77C8DE2ABA0FDB000DC492 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12707D2C94C7AABC39B3BBB /* Pods-GoFood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4LHNY2FHRA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoFood/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myn.GoFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D77C8C32ABA0FD9000DC492 /* Build configuration list for PBXProject "GoFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D77C8DA2ABA0FDB000DC492 /* Debug */,
+				8D77C8DB2ABA0FDB000DC492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D77C8DC2ABA0FDB000DC492 /* Build configuration list for PBXNativeTarget "GoFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D77C8DD2ABA0FDB000DC492 /* Debug */,
+				8D77C8DE2ABA0FDB000DC492 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D77C8C02ABA0FD9000DC492 /* Project object */;
+}

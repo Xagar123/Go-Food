@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCollectionCell" id="gTV-IL-0wX" customClass="BannerCollectionCell" customModule="GoFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="157"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQA-kv-SNi" customClass="CardView" customModule="GoFood" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="157"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="el8-TY-vyM">
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="157"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount 40%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPI-wf-bch">
+                                <rect key="frame" x="18" y="86" width="112" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LSo-DK-8BZ"/>
+                                    <constraint firstAttribute="width" constant="112" id="b2V-9R-vy2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-Ml-3xH">
+                                <rect key="frame" x="18" y="117" width="93" height="28"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Gs5-T9-Ef0"/>
+                                    <constraint firstAttribute="width" constant="93" id="PGV-oh-OJP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Order Now!">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Biryani" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-G6-hUL">
+                                <rect key="frame" x="16" y="65" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hsk-U0-UBc"/>
+                                    <constraint firstAttribute="width" constant="200" id="kFe-c3-RZC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                <color key="textColor" red="0.92549019610000005" green="0.94901960780000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VPy-Ml-3xH" firstAttribute="leading" secondItem="BQA-kv-SNi" secondAttribute="leading" constant="18" id="7K8-MQ-SCi"/>
+                            <constraint firstAttribute="bottom" secondItem="el8-TY-vyM" secondAttribute="bottom" id="9gV-fK-rUC"/>
+                            <constraint firstAttribute="trailing" secondItem="el8-TY-vyM" secondAttribute="trailing" id="BRA-tM-XNq"/>
+                            <constraint firstItem="VPy-Ml-3xH" firstAttribute="top" secondItem="aPI-wf-bch" secondAttribute="bottom" constant="10" id="Qka-5w-XJF"/>
+                            <constraint firstItem="6Ug-G6-hUL" firstAttribute="leading" secondItem="BQA-kv-SNi" secondAttribute="leading" constant="16" id="R84-dg-MUZ"/>
+                            <constraint firstItem="el8-TY-vyM" firstAttribute="top" secondItem="BQA-kv-SNi" secondAttribute="top" id="YZy-j9-nKB"/>
+                            <constraint firstItem="aPI-wf-bch" firstAttribute="top" secondItem="6Ug-G6-hUL" secondAttribute="bottom" id="avU-hy-ICY"/>
+                            <constraint firstItem="aPI-wf-bch" firstAttribute="leading" secondItem="BQA-kv-SNi" secondAttribute="leading" constant="18" id="h6h-ou-0kr"/>
+                            <constraint firstItem="el8-TY-vyM" firstAttribute="leading" secondItem="BQA-kv-SNi" secondAttribute="leading" id="olz-Ys-ZDx"/>
+                            <constraint firstItem="6Ug-G6-hUL" firstAttribute="top" secondItem="BQA-kv-SNi" secondAttribute="top" constant="65" id="p40-j6-KFI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BQA-kv-SNi" secondAttribute="bottom" id="2AE-1y-Lvn"/>
+                <constraint firstItem="BQA-kv-SNi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BPY-2n-xCf"/>
+                <constraint firstAttribute="trailing" secondItem="BQA-kv-SNi" secondAttribute="trailing" id="Ghm-fo-bQI"/>
+                <constraint firstItem="BQA-kv-SNi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XXz-10-tsh"/>
+            </constraints>
+            <size key="customSize" width="336" height="157"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="bannerImage" destination="el8-TY-vyM" id="rtw-hS-iYo"/>
+                <outlet property="discountLbl" destination="aPI-wf-bch" id="ikv-Vk-8cR"/>
+                <outlet property="titleLbl" destination="6Ug-G6-hUL" id="awk-IB-VyC"/>
+            </connections>
+            <point key="canvasLocation" x="312.97709923664121" y="57.394366197183103"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="banner1" width="346" height="142"/>
+        <namedColor name="AccentColor">
+            <color red="0.18799999356269836" green="0.4779999852180481" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
