@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h37-RB-dKj" customClass="CardView" customModule="GoFood" customModuleProvider="target">
-                        <rect key="frame" x="30" y="0.0" width="307" height="97"/>
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="97"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="curve" translatesAutoresizingMaskIntoConstraints="NO" id="cHM-pw-aI4">
                                 <rect key="frame" x="207" y="12" width="110" height="85"/>
@@ -60,13 +60,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="AccentColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="h37-RB-dKj" secondAttribute="bottom" id="9La-EI-VKL"/>
-                    <constraint firstAttribute="trailing" secondItem="h37-RB-dKj" secondAttribute="trailing" constant="30" id="Eq7-Dx-hOy"/>
+                    <constraint firstAttribute="trailing" secondItem="h37-RB-dKj" secondAttribute="trailing" id="Eq7-Dx-hOy"/>
                     <constraint firstItem="h37-RB-dKj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gru-A1-MSh"/>
-                    <constraint firstItem="h37-RB-dKj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="sY8-4p-e1K"/>
+                    <constraint firstItem="h37-RB-dKj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sY8-4p-e1K"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

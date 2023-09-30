@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="goK-hE-L2W">
-                        <rect key="frame" x="30" y="0.0" width="309" height="134"/>
+                        <rect key="frame" x="0.0" y="0.0" width="369" height="134"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2mZ-vE-F5x">
                             <size key="itemSize" width="128" height="128"/>
@@ -37,21 +37,16 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="goK-hE-L2W" secondAttribute="bottom" id="DTX-Sl-CU5"/>
                     <constraint firstItem="goK-hE-L2W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ajU-3R-Tea"/>
-                    <constraint firstAttribute="trailing" secondItem="goK-hE-L2W" secondAttribute="trailing" constant="30" id="pk6-g6-e7e"/>
-                    <constraint firstItem="goK-hE-L2W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="sFK-DE-PVK"/>
+                    <constraint firstAttribute="trailing" secondItem="goK-hE-L2W" secondAttribute="trailing" id="pk6-g6-e7e"/>
+                    <constraint firstItem="goK-hE-L2W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sFK-DE-PVK"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                        <real key="value" value="10"/>
+                        <real key="value" value="0.0"/>
                     </userDefinedRuntimeAttribute>
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="10"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
+            <viewLayoutGuide key="safeArea" id="Ywa-49-mkd"/>
             <connections>
                 <outlet property="collectionView" destination="goK-hE-L2W" id="cji-MH-MgF"/>
             </connections>

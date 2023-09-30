@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,16 +13,56 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomHeaderView" customModule="GoFood" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="644" height="104"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECOMMENDED FOR YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6da-LV-UCh">
+                    <rect key="frame" x="223.66666666666663" y="40" width="197" height="24.333333333333329"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                    <color key="textColor" name="AccentColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMK-Vy-iyl">
+                    <rect key="frame" x="0.0" y="51.666666666666664" width="213.66666666666666" height="1"/>
+                    <color key="backgroundColor" red="0.92549019607843142" green="0.94901960784313721" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="7hC-Xh-jNN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.92549019610000005" green="0.94901960780000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpW-3E-bnM">
+                    <rect key="frame" x="430.66666666666669" y="51.666666666666664" width="213.33333333333331" height="1"/>
+                    <color key="backgroundColor" red="0.92549019610000005" green="0.94901960780000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="E9X-jD-HA9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.92549019610000005" green="0.94901960780000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBrownColor"/>
             <accessibility key="accessibilityConfiguration" identifier="CustomHeaderView"/>
+            <constraints>
+                <constraint firstItem="AMK-Vy-iyl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8lx-Me-obZ"/>
+                <constraint firstItem="MpW-3E-bnM" firstAttribute="leading" secondItem="6da-LV-UCh" secondAttribute="trailing" constant="10" id="Omj-YM-kTj"/>
+                <constraint firstItem="MpW-3E-bnM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dqT-n9-cTQ"/>
+                <constraint firstItem="MpW-3E-bnM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hJq-Zd-1f1"/>
+                <constraint firstItem="6da-LV-UCh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="puq-LH-efb"/>
+                <constraint firstItem="AMK-Vy-iyl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rJ2-wi-rPp"/>
+                <constraint firstItem="6da-LV-UCh" firstAttribute="leading" secondItem="AMK-Vy-iyl" secondAttribute="trailing" constant="10" id="s9X-WK-Lgv"/>
+                <constraint firstItem="6da-LV-UCh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uey-u2-yGW"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerTitle" destination="6da-LV-UCh" id="sgL-Dm-K6V"/>
+            </connections>
             <point key="canvasLocation" x="186.25954198473281" y="-243.66197183098592"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.18799999356269836" green="0.4779999852180481" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

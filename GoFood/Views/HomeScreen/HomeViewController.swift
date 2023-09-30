@@ -181,12 +181,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = Bundle.main.loadNibNamed("CustomHeaderView", owner: self)?.first as? CustomHeaderView else { return UIView()}
-        if section == 0 {
-            headerView.backgroundColor = UIColor.clear
+        if section == 2 {
+            headerView.headerTitle.text = "RECOMMENDED FOR YOU"
+            return headerView
         }
-        return headerView
-                
-                
+        if section == 3 {
+            headerView.headerTitle.text = "WHAT’S ON YOUR MIND?"
+            return headerView
+        }
+       
+        return nil
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -196,22 +200,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return 20
         case 2:
             return 50
+        case 3:
+            return 50
         default:
             return 0
         }
         
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 2:
-//            return "         -------- RECOMMENDED FOR YOU ---------"
-//        case 3:
-//            return "         --------- WHAT’S ON YOUR MIND? ---------"
-//        default:
-//            return ""
-//        }
-//    }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20

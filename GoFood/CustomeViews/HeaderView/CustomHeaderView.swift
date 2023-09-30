@@ -9,6 +9,7 @@ import UIKit
 
 class CustomHeaderView: UIView {
 
-    static let identifier = "CustomHeaderView"
+    @IBOutlet weak var headerTitle: UILabel!
+    
     
 }
