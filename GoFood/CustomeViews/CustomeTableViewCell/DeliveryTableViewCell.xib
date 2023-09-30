@@ -20,34 +20,37 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h37-RB-dKj" customClass="CardView" customModule="GoFood" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="367" height="97"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="curve" translatesAutoresizingMaskIntoConstraints="NO" id="cHM-pw-aI4">
-                                <rect key="frame" x="207" y="12" width="110" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curve" translatesAutoresizingMaskIntoConstraints="NO" id="cHM-pw-aI4">
+                                <rect key="frame" x="294" y="12" width="73" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="9Pj-iP-8A9"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTc-Oi-aoe">
-                                <rect key="frame" x="261" y="5" width="38" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="forwardBtn" title=" "/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery at Home " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-uc-fTG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery at Home " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-uc-fTG">
                                 <rect key="frame" x="19" y="12" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="d15-fX-SmV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flavorful, Fast, and Fabulous: Right to Your Doorstep!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zut-3X-vW8">
-                                <rect key="frame" x="19" y="37" width="269" height="15.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavorful, Fast, and Fabulous: Right to Your Doorstep!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zut-3X-vW8">
+                                <rect key="frame" x="19" y="37" width="269" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="F5n-qe-WRZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-y4-fuN">
-                                <rect key="frame" x="19" y="60.333333333333343" width="75" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-y4-fuN">
+                                <rect key="frame" x="19" y="60" width="75" height="25"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="6Fk-mv-KFb"/>
+                                    <constraint firstAttribute="height" constant="25" id="ssZ-VM-slC"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Order!">
                                     <color key="baseForegroundColor" name="AccentColor"/>
@@ -58,8 +61,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTc-Oi-aoe">
+                                <rect key="frame" x="321" y="8" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="826-uG-wT7"/>
+                                    <constraint firstAttribute="width" constant="38" id="YlT-TT-3ts"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="forwardBtn" title=" "/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="fEL-y4-fuN" firstAttribute="top" secondItem="zut-3X-vW8" secondAttribute="bottom" constant="8" id="2Hq-DE-mbm"/>
+                            <constraint firstItem="zut-3X-vW8" firstAttribute="top" secondItem="AS8-uc-fTG" secondAttribute="bottom" constant="4" id="8ug-CT-PEe"/>
+                            <constraint firstItem="QTc-Oi-aoe" firstAttribute="top" secondItem="h37-RB-dKj" secondAttribute="top" constant="8" id="C8M-Rd-Kkh"/>
+                            <constraint firstItem="zut-3X-vW8" firstAttribute="leading" secondItem="h37-RB-dKj" secondAttribute="leading" constant="19" id="FTY-CA-gPU"/>
+                            <constraint firstAttribute="trailing" secondItem="QTc-Oi-aoe" secondAttribute="trailing" constant="8" id="Ikq-cD-QuG"/>
+                            <constraint firstItem="AS8-uc-fTG" firstAttribute="leading" secondItem="h37-RB-dKj" secondAttribute="leading" constant="19" id="Jg5-Jb-YD1"/>
+                            <constraint firstItem="cHM-pw-aI4" firstAttribute="top" secondItem="h37-RB-dKj" secondAttribute="top" constant="12" id="RTR-CB-Ckd"/>
+                            <constraint firstItem="fEL-y4-fuN" firstAttribute="leading" secondItem="h37-RB-dKj" secondAttribute="leading" constant="19" id="TAf-1L-FWm"/>
+                            <constraint firstItem="zut-3X-vW8" firstAttribute="top" secondItem="AS8-uc-fTG" secondAttribute="bottom" constant="4" id="W2f-8E-JGC"/>
+                            <constraint firstAttribute="trailing" secondItem="cHM-pw-aI4" secondAttribute="trailing" id="cq5-US-u5x"/>
+                            <constraint firstItem="AS8-uc-fTG" firstAttribute="top" secondItem="h37-RB-dKj" secondAttribute="top" constant="12" id="e6N-XE-wsE"/>
+                            <constraint firstAttribute="bottom" secondItem="fEL-y4-fuN" secondAttribute="bottom" constant="12" id="fpH-m1-rNz"/>
+                            <constraint firstAttribute="bottom" secondItem="cHM-pw-aI4" secondAttribute="bottom" id="hEe-tK-A2Q"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="10"/>

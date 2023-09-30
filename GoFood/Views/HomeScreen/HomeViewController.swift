@@ -8,14 +8,14 @@
 import UIKit
 import FirebaseAuth
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UISearchBarDelegate {
 
+    //MARK: -Properties
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var placeholderTimer: Timer?
     let placeholderTexts = ["Search Biryani","Search Fried Rice","Search Pizza","Search Rolls","Search Burger","Search Chicken","Search Thali","Search Noodles","Search North Indian","Search Paeatha"]
-    var currentPlaceholderIndex = 0
     
     var totalSection = ["Delivery","Order Now!","RECOMMENDED","YOUR MIND?"]
     
@@ -26,20 +26,21 @@ class HomeViewController: UIViewController {
         case type4
     }
     
+    var placeholderLabel: UILabel!
+    var currentIndex = 0
+    var timer: Timer?
+    
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        ///registering delivery cell
-        tableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "DeliveryTableViewCell")
-        
-        ///registering TableCollectionCell
-        tableView.register(UINib(nibName: TableCollectionViewCell.identifier, bundle: nil), forCellReuseIdentifier: TableCollectionViewCell.identifier)
-     
-//        ///registering header view
-//        tableView.register(CustomHeaderView.self, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
-
+        searchBar.delegate = self
+    
+        registerCell()
+        setupPlaceholderLbl()
+        setupNavigationBar()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             view.addGestureRecognizer(tapGesture)
         
@@ -48,63 +49,140 @@ class HomeViewController: UIViewController {
             .init(bannerImage: "banner2", bannerTitle: "Chicken Pizza", discount: "Discount 60%"),
             .init(bannerImage: "banner3", bannerTitle: "Broasted Chicken Hut", discount: "Discount 50%"),
         ]
-        searchBar.placeholder = placeholderTexts[currentPlaceholderIndex]
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "profile"), style: .done, target: self, action: #selector(profileBtnTapped))
-        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        searchBar.resignFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        startPlaceholderTimer()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        stopPlaceholderTimer()
     }
 
-    func stopPlaceholderTimer() {
-        placeholderTimer?.invalidate()
-        placeholderTimer = nil
+    //MARK: - Helper
+    func setupPlaceholderLbl() {
+        // Create a custom label for the placeholder text
+        placeholderLabel = UILabel()
+        placeholderLabel.font = UIFont.systemFont(ofSize: 17.0)
+        placeholderLabel.textColor = UIColor.lightGray
+        searchBar.addSubview(placeholderLabel)
+        
+        // Position the custom label like the default placeholder text
+        placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            placeholderLabel.leadingAnchor.constraint(equalTo: searchBar.layoutMarginsGuide.leadingAnchor,constant: 30),
+            placeholderLabel.trailingAnchor.constraint(equalTo: searchBar.layoutMarginsGuide.trailingAnchor),
+            placeholderLabel.centerYAnchor.constraint(equalTo: searchBar.centerYAnchor)
+        ])
+        
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updatePlaceholder), userInfo: nil, repeats: true)
+        
+        updatePlaceholder()
+        startAnimationTimer()
+        
+    }
+    
+    func registerCell() {
+        ///registering delivery cell
+        tableView.register(UINib(nibName: "DeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "DeliveryTableViewCell")
+        
+        ///registering TableCollectionCell
+        tableView.register(UINib(nibName: TableCollectionViewCell.identifier, bundle: nil), forCellReuseIdentifier: TableCollectionViewCell.identifier)
     }
 
-    func startPlaceholderTimer() {
-        placeholderTimer = Timer.scheduledTimer(timeInterval: 2.0,
-                                               target: self,
-                                               selector: #selector(rotatePlaceholders),
-                                               userInfo: nil,
-                                               repeats: true)
+    func setupNavigationBar() {
+        // Create a custom view to hold the button
+        let customView = UIView()
+        
+        // Create a button with your image
+        let profileBtn = UIButton()
+        profileBtn.setImage(UIImage(named: "profile"), for: .normal)
+        profileBtn.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
+        
+        // Add the button to the custom view
+        customView.addSubview(profileBtn)
+        
+        // Add constraints to the button and custom view
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        profileBtn.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            profileBtn.leadingAnchor.constraint(equalTo: customView.leadingAnchor),
+            profileBtn.topAnchor.constraint(equalTo: customView.topAnchor,constant: 0),
+            profileBtn.trailingAnchor.constraint(equalTo: customView.trailingAnchor),
+            profileBtn.bottomAnchor.constraint(equalTo: customView.bottomAnchor,constant: 40),
+            
+            customView.widthAnchor.constraint(equalToConstant: 60),
+            customView.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: customView)
     }
-
-    func animatePlaceholderChange() {
-        UIView.transition(with: searchBar,
-                          duration: 0.5,
-                          options: .transitionCrossDissolve,
-                          animations: {
-                              self.searchBar.placeholder = self.placeholderTexts[self.currentPlaceholderIndex]
-                          },
-                          completion: nil)
-    }
-
-
+    
+    //MARK: - Selector
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         ///hiding keyboard when ever user taped anywhere in screen
         view.endEditing(true)
     }
     
-    @objc func rotatePlaceholders() {
-        currentPlaceholderIndex = (currentPlaceholderIndex + 1) % placeholderTexts.count
-        animatePlaceholderChange()
-    }
     
-    @objc func profileBtnTapped() {
+    @objc func rightButtonTapped() {
+        print("profile btn tapped")
         let selectedTabBar = 3
         if selectedTabBar < tabBarController?.viewControllers?.count ?? 0 {
             tabBarController?.selectedIndex = selectedTabBar
         }
+       }
+    
+    @objc func updatePlaceholder() {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        animation.type = .push
+        animation.subtype = .fromTop
+        animation.duration = 0.5
         
+        // Apply the animation to the custom placeholder label
+        placeholderLabel.layer.add(animation, forKey: "changePlaceholder")
+        
+        placeholderLabel.text = placeholderTexts[currentIndex]
+        currentIndex = (currentIndex + 1) % placeholderTexts.count
     }
 
+    
+    //MARK: -SearchBar delegate
+    deinit {
+        // Invalidate the timer when the view controller is deallocated
+        timer?.invalidate()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        // User has started typing, stop the animation timer
+        stopAnimationTimer()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        // User has finished typing, resume the animation timer
+        startAnimationTimer()
+        
+        // Deselect the search bar and hide the keyboard
+        searchBar.resignFirstResponder()
+    }
+    
+    private func startAnimationTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updatePlaceholder), userInfo: nil, repeats: true)
+        updatePlaceholder()
+    }
+    
+    private func stopAnimationTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
 
 }
 
