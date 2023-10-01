@@ -974,7 +974,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7B-9w-9ZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-471" y="2433"/>
+            <point key="canvasLocation" x="-465" y="2483"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Lmu-Gu-pAC">
@@ -984,8 +984,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="h9H-NR-V4O">
-                                <rect key="frame" x="27" y="74" width="339" height="46"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="h9H-NR-V4O">
+                                <rect key="frame" x="17" y="74" width="359" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="J9U-U8-plH"/>
                                 </constraints>
@@ -998,9 +998,9 @@
                                     <outlet property="delegate" destination="S3d-PQ-7yV" id="QqN-ml-CLx"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EyC-he-rx1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EyC-he-rx1">
                                 <rect key="frame" x="0.0" y="120" width="393" height="634"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -1009,10 +1009,10 @@
                         <constraints>
                             <constraint firstItem="h9H-NR-V4O" firstAttribute="top" secondItem="Q7g-x7-r5G" secondAttribute="top" constant="30" id="0z3-1D-Zs3"/>
                             <constraint firstItem="Q7g-x7-r5G" firstAttribute="bottom" secondItem="EyC-he-rx1" secondAttribute="bottom" id="1eX-22-Apf"/>
-                            <constraint firstItem="h9H-NR-V4O" firstAttribute="trailing" secondItem="Q7g-x7-r5G" secondAttribute="trailing" constant="-27" id="BAy-rG-dzn"/>
+                            <constraint firstItem="h9H-NR-V4O" firstAttribute="trailing" secondItem="Q7g-x7-r5G" secondAttribute="trailing" constant="-17" id="BAy-rG-dzn"/>
                             <constraint firstItem="EyC-he-rx1" firstAttribute="top" secondItem="h9H-NR-V4O" secondAttribute="bottom" id="UXN-fK-UVa"/>
                             <constraint firstItem="EyC-he-rx1" firstAttribute="leading" secondItem="Q7g-x7-r5G" secondAttribute="leading" id="bnA-dp-Otj"/>
-                            <constraint firstItem="h9H-NR-V4O" firstAttribute="leading" secondItem="Q7g-x7-r5G" secondAttribute="leading" constant="27" id="oGa-Oh-XQH"/>
+                            <constraint firstItem="h9H-NR-V4O" firstAttribute="leading" secondItem="Q7g-x7-r5G" secondAttribute="leading" constant="17" id="oGa-Oh-XQH"/>
                             <constraint firstItem="Q7g-x7-r5G" firstAttribute="trailing" secondItem="EyC-he-rx1" secondAttribute="trailing" id="oc6-TX-fqH"/>
                         </constraints>
                     </view>
@@ -1075,6 +1075,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="h9H-NR-V4O" id="ZeX-7P-MZT"/>
+                        <outlet property="searchBarHeightCons" destination="J9U-U8-plH" id="E1C-bd-FcQ"/>
+                        <outlet property="searchBarTopConstrainted" destination="0z3-1D-Zs3" id="acD-jb-BDe"/>
                         <outlet property="tableView" destination="EyC-he-rx1" id="TAf-LM-KR0"/>
                     </connections>
                 </viewController>

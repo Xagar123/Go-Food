@@ -8,12 +8,15 @@
 import UIKit
 import FirebaseAuth
 
-class HomeViewController: UIViewController, UISearchBarDelegate {
+class HomeViewController: UIViewController, UISearchBarDelegate{
 
     //MARK: -Properties
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBarTopConstrainted: NSLayoutConstraint!
+    @IBOutlet weak var searchBarHeightCons: NSLayoutConstraint!
+    
     
     let placeholderTexts = ["Search Biryani","Search Fried Rice","Search Pizza","Search Rolls","Search Burger","Search Chicken","Search Thali","Search Noodles","Search North Indian","Search Paeatha"]
     
@@ -30,6 +33,9 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     var currentIndex = 0
     var timer: Timer?
     
+    var isNavigationBarHidden = false
+    var previousOffset: CGFloat = 0.0
+    
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -41,6 +47,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         registerCell()
         setupPlaceholderLbl()
         setupNavigationBar()
+       
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             view.addGestureRecognizer(tapGesture)
         
@@ -49,6 +56,14 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
             .init(bannerImage: "banner2", bannerTitle: "Chicken Pizza", discount: "Discount 60%"),
             .init(bannerImage: "banner3", bannerTitle: "Broasted Chicken Hut", discount: "Discount 50%"),
         ]
+        
+        // Change the color of the search icon
+        if let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField {
+            if let iconView = textFieldInsideSearchBar.leftView as? UIImageView {
+                iconView.tintColor = UIColor(hexString: "#307A59")
+            }
+        }
+        
 
     }
     
@@ -59,10 +74,12 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        stopAnimationTimer()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        stopAnimationTimer()
     }
 
     //MARK: - Helper
@@ -102,7 +119,12 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         
         // Create a button with your image
         let profileBtn = UIButton()
-        profileBtn.setImage(UIImage(named: "profile"), for: .normal)
+        // Load the image
+        if let image = UIImage(named: "profile") {
+            let templatedImage = image.withRenderingMode(.alwaysTemplate)
+            profileBtn.setImage(templatedImage, for: .normal)
+            profileBtn.tintColor = UIColor(hexString: "#307A59")
+        }
         profileBtn.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
         
         // Add the button to the custom view
@@ -207,7 +229,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return 0
         }
-//        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -290,6 +311,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20
     }
-
+    
+    //hiding the nav bar when scroll up and showing when scroll down
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffSet = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffSet - 100
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+        
+        if offset < 0 {
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        } else {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+        }
+    }
     
 }
+
