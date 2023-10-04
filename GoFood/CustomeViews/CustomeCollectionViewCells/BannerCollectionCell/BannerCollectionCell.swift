@@ -25,4 +25,7 @@ class BannerCollectionCell: UICollectionViewCell {
         self.titleLbl.text = model.bannerTitle
         self.discountLbl.text = model.discount
     }
+    
+    
+    
 }

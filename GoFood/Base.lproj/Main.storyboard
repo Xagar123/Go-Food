@@ -934,7 +934,7 @@
             </objects>
             <point key="canvasLocation" x="-1731" y="2433"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="dDN-Nz-xyv">
             <objects>
                 <viewController id="2yE-KA-cd6" customClass="ProfileViewController" customModule="GoFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -961,20 +961,31 @@
                                     <action selector="signOutBtnTapped:" destination="2yE-KA-cd6" eventType="touchUpInside" id="fgY-ac-xjq"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tWJ-gP-gpg">
+                                <rect key="frame" x="0.0" y="44" width="393" height="653"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qyu-Pv-NnR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2JF-r1-I0w" firstAttribute="top" secondItem="tWJ-gP-gpg" secondAttribute="bottom" constant="30" id="5vg-0v-mID"/>
+                            <constraint firstItem="tWJ-gP-gpg" firstAttribute="top" secondItem="Qyu-Pv-NnR" secondAttribute="top" id="ZeP-Le-VZT"/>
                             <constraint firstItem="Qyu-Pv-NnR" firstAttribute="bottom" secondItem="2JF-r1-I0w" secondAttribute="bottom" constant="30" id="bJk-kC-6Bd"/>
+                            <constraint firstItem="Qyu-Pv-NnR" firstAttribute="trailing" secondItem="tWJ-gP-gpg" secondAttribute="trailing" id="bLi-kF-1kM"/>
                             <constraint firstItem="Qyu-Pv-NnR" firstAttribute="trailing" secondItem="2JF-r1-I0w" secondAttribute="trailing" constant="27" id="jZa-Li-8CH"/>
                             <constraint firstItem="2JF-r1-I0w" firstAttribute="leading" secondItem="Qyu-Pv-NnR" secondAttribute="leading" constant="27" id="mKc-6I-l9J"/>
+                            <constraint firstItem="tWJ-gP-gpg" firstAttribute="leading" secondItem="Qyu-Pv-NnR" secondAttribute="leading" id="mpd-Nk-iYF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="tabProfile" id="pEA-5f-HLt"/>
+                    <navigationItem key="navigationItem" id="Rkr-1B-00m"/>
+                    <connections>
+                        <outlet property="tableView" destination="tWJ-gP-gpg" id="8DF-da-KOE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7B-9w-9ZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-465" y="2483"/>
+            <point key="canvasLocation" x="460.30534351145036" y="2482.3943661971834"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Lmu-Gu-pAC">
@@ -1112,7 +1123,7 @@
                         <segue destination="FGc-B2-IvM" kind="relationship" relationship="viewControllers" id="N1F-Ou-cDS"/>
                         <segue destination="6ht-IS-ko2" kind="relationship" relationship="viewControllers" id="XhW-eV-ZhF"/>
                         <segue destination="fwB-pU-yz4" kind="relationship" relationship="viewControllers" id="VKy-hl-EBE"/>
-                        <segue destination="2yE-KA-cd6" kind="relationship" relationship="viewControllers" id="T5O-0e-mW4"/>
+                        <segue destination="h90-30-eyV" kind="relationship" relationship="viewControllers" id="T5O-0e-mW4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMR-s4-Oje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1137,6 +1148,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OZ-Bz-Anr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117" y="921"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="VUb-xg-ajX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h90-30-eyV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="tabProfile" id="pEA-5f-HLt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="riy-CW-cpa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2yE-KA-cd6" kind="relationship" relationship="rootViewController" id="PEq-Vp-1gn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UxH-R4-2qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-466.41221374045801" y="2482.3943661971834"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

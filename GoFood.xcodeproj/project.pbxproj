@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4DF32CE3D8E1E37CE56AB342 /* Pods_GoFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F79C0CE637BA0138EDAFF7 /* Pods_GoFood.framework */; };
+		8D2960162ACDEB200002E804 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2960142ACDEB200002E804 /* ProfileTableViewCell.swift */; };
+		8D2960172ACDEB200002E804 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2960152ACDEB200002E804 /* ProfileTableViewCell.xib */; };
+		8D29601D2ACDF2E50002E804 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29601C2ACDF2E50002E804 /* ProfileHeaderView.swift */; };
+		8D29601F2ACDF2F80002E804 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D29601E2ACDF2F80002E804 /* ProfileHeaderView.xib */; };
 		8D77C8CC2ABA0FD9000DC492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8CB2ABA0FD9000DC492 /* AppDelegate.swift */; };
 		8D77C8CE2ABA0FD9000DC492 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D77C8CD2ABA0FD9000DC492 /* SceneDelegate.swift */; };
 		8D77C8D32ABA0FD9000DC492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D77C8D12ABA0FD9000DC492 /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		4789EE3D5B99BAE9EDFFC43A /* Pods-GoFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoFood.debug.xcconfig"; path = "Target Support Files/Pods-GoFood/Pods-GoFood.debug.xcconfig"; sourceTree = "<group>"; };
+		8D2960142ACDEB200002E804 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		8D2960152ACDEB200002E804 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		8D29601C2ACDF2E50002E804 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		8D29601E2ACDF2F80002E804 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		8D77C8C82ABA0FD9000DC492 /* GoFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D77C8CB2ABA0FD9000DC492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D77C8CD2ABA0FD9000DC492 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +113,24 @@
 				91F79C0CE637BA0138EDAFF7 /* Pods_GoFood.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D2960122ACDEADE0002E804 /* ProfileViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8D2960142ACDEB200002E804 /* ProfileTableViewCell.swift */,
+				8D2960152ACDEB200002E804 /* ProfileTableViewCell.xib */,
+			);
+			path = ProfileViewCell;
+			sourceTree = "<group>";
+		};
+		8D2960132ACDEAF80002E804 /* ProfileHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8D29601C2ACDF2E50002E804 /* ProfileHeaderView.swift */,
+				8D29601E2ACDF2F80002E804 /* ProfileHeaderView.xib */,
+			);
+			path = ProfileHeaderView;
 			sourceTree = "<group>";
 		};
 		8D77C8BF2ABA0FD9000DC492 = {
@@ -283,6 +309,8 @@
 		8DEDB1122AC34DEB003DEAA9 /* ProfileVC */ = {
 			isa = PBXGroup;
 			children = (
+				8D2960132ACDEAF80002E804 /* ProfileHeaderView */,
+				8D2960122ACDEADE0002E804 /* ProfileViewCell */,
 				8DEDB1132AC34E08003DEAA9 /* ProfileViewController.swift */,
 			);
 			path = ProfileVC;
@@ -374,8 +402,10 @@
 				8DC810C02AC4A7FC00BF8F7D /* CustomHeaderView.xib in Resources */,
 				8DC810BB2AC4963000BF8F7D /* RecommendedCollectionViewCell.xib in Resources */,
 				8DB1CD042ABB4EE900445DFE /* GoogleService-Info.plist in Resources */,
+				8D29601F2ACDF2F80002E804 /* ProfileHeaderView.xib in Resources */,
 				8D77C8D52ABA0FDB000DC492 /* Assets.xcassets in Resources */,
 				8D77C8D32ABA0FD9000DC492 /* Main.storyboard in Resources */,
+				8D2960172ACDEB200002E804 /* ProfileTableViewCell.xib in Resources */,
 				8DC810C52AC4AEEE00BF8F7D /* ItemsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,8 +472,10 @@
 				8DC810B02AC479A800BF8F7D /* TableCollectionViewCell.swift in Sources */,
 				8DC810BE2AC4A7CE00BF8F7D /* CustomHeaderView.swift in Sources */,
 				8DEDB1142AC34E08003DEAA9 /* ProfileViewController.swift in Sources */,
+				8D29601D2ACDF2E50002E804 /* ProfileHeaderView.swift in Sources */,
 				8DB1CD072ABB5A8200445DFE /* HomeViewController.swift in Sources */,
 				8D77C8EA2ABA1A1F000DC492 /* OnBoardingCollectionViewCell.swift in Sources */,
+				8D2960162ACDEB200002E804 /* ProfileTableViewCell.swift in Sources */,
 				8D77C8E32ABA112D000DC492 /* OnBoardingViewController.swift in Sources */,
 				8D77C8E82ABA18CE000DC492 /* OnBoardingSlide.swift in Sources */,
 				8DC810BA2AC4963000BF8F7D /* RecommendedCollectionViewCell.swift in Sources */,

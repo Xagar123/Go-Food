@@ -312,19 +312,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 20
     }
     
-    //hiding the nav bar when scroll up and showing when scroll down
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let defaultOffSet = view.safeAreaInsets.top
-        let offset = scrollView.contentOffset.y + defaultOffSet - 100
-        
-        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
-        
-        if offset < 0 {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
-        } else {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
-        }
-    }
-    
+//    //hiding the nav bar when scroll up and showing when scroll down
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let defaultOffSet = view.safeAreaInsets.top
+//        let offset = scrollView.contentOffset.y + defaultOffSet - 100
+//
+//        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+//
+//        if offset < 0 {
+//            self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        } else {
+//            self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        }
+//    }
+//    
 }
 
